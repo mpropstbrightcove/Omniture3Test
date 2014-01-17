@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BECD9B1D1888282F007B34E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B1C1888282F007B34E0 /* Foundation.framework */; };
+		BECD9B1D1888282F007B34E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B1C1888282F007B34E0 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		BECD9B221888282F007B34E0 /* SampleVideoLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BECD9B211888282F007B34E0 /* SampleVideoLibrary.h */; };
 		BECD9B241888282F007B34E0 /* SampleVideoLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = BECD9B231888282F007B34E0 /* SampleVideoLibrary.m */; };
 		BECD9B2B18882830007B34E0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B2A18882830007B34E0 /* XCTest.framework */; };
@@ -16,9 +16,9 @@
 		BECD9B3118882830007B34E0 /* libSampleVideoLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B191888282F007B34E0 /* libSampleVideoLibrary.a */; };
 		BECD9B3718882830007B34E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BECD9B3518882830007B34E0 /* InfoPlist.strings */; };
 		BECD9B3918882830007B34E0 /* SampleVideoLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BECD9B3818882830007B34E0 /* SampleVideoLibraryTests.m */; };
-		BECD9B4318882840007B34E0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4218882840007B34E0 /* MediaPlayer.framework */; };
-		BECD9B4518882845007B34E0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4418882845007B34E0 /* AVFoundation.framework */; };
-		BECD9B4718882AF2007B34E0 /* admsAppLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4618882AF2007B34E0 /* admsAppLibrary.a */; };
+		BECD9B4318882840007B34E0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4218882840007B34E0 /* MediaPlayer.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BECD9B4518882845007B34E0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4418882845007B34E0 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		BECD9B4718882AF2007B34E0 /* admsAppLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4618882AF2007B34E0 /* admsAppLibrary.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -439,6 +439,7 @@
 				BECD9B3E18882830007B34E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BECD9B3F18882830007B34E0 /* Build configuration list for PBXNativeTarget "SampleVideoLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +448,7 @@
 				BECD9B4118882830007B34E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

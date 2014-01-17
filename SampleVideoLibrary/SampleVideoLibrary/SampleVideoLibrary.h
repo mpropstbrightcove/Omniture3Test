@@ -11,7 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "ADMS_MediaMeasurement.h"
 
-@interface SampleVideoLibrary : NSObject
+@interface SampleVideoLibrary : NSObject<ADMS_MediaMeasurementDelegate>
 @property (strong) MPMoviePlayerController *player;
 
 //Method takes a URL to video and returns a MPMoviePlayerController with Omniture setup

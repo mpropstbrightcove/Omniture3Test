@@ -7,15 +7,15 @@
 #import "ADMS_Measurement.h"
 #import "ADMS_MediaMeasurement.h"
 
-NSString *const TRACKING_RSID =	@"rsid_value_sample_app";
-NSString *const TRACKING_SERVER = @"http://www.foo_app.com";
+NSString *const TRACKING_APP_RSID =	@"rsid_value_sample_app";
+NSString *const TRACKING_APP_SERVER = @"http://www.foo_app.com";
 
 @implementation TrackingHelper
 
 + (void)configureAppMeasurement{
 	ADMS_Measurement *measurement = [ADMS_Measurement sharedInstance];
-    [measurement configureMeasurementWithReportSuiteIDs:TRACKING_RSID
-                                             trackingServer:TRACKING_SERVER];
+    [measurement configureMeasurementWithReportSuiteIDs:TRACKING_APP_RSID
+                                             trackingServer:TRACKING_APP_SERVER];
     
     measurement.debugLogging = NO;
 	measurement.offlineTrackingEnabled = NO;
@@ -90,6 +90,9 @@ NSString *const TRACKING_SERVER = @"http://www.foo_app.com";
     [contextDict setObject: [trackingDict objectForKey:@"previous_page"] forKey:@"previous_page"];
     
     // Send tracking call
+    [[ADMS_Measurement sharedInstance] configureMeasurementWithReportSuiteIDs:TRACKING_APP_RSID
+                                         trackingServer:TRACKING_APP_SERVER];
+    
     [[ADMS_Measurement sharedInstance] trackEvents:@"event16" withContextData:contextDict];
     
 }

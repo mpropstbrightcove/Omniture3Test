@@ -23,11 +23,11 @@
 		BE0B8B191885955600599CE2 /* Omniture3SampleTestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0B8B181885955600599CE2 /* Omniture3SampleTestProjectTests.m */; };
 		BE0B8B34188597BE00599CE2 /* admsAppLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0B8B33188597BE00599CE2 /* admsAppLibrary.a */; };
 		BE0B8B3718859FF900599CE2 /* TrackingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BE0B8B3618859FF900599CE2 /* TrackingHelper.m */; };
-		BECD9B4918882FD3007B34E0 /* libSampleVideoLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B4818882FD3007B34E0 /* libSampleVideoLibrary.a */; };
 		BECD9B4D188830EA007B34E0 /* big-buck-bunny.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BECD9B4A188830EA007B34E0 /* big-buck-bunny.mp4 */; };
 		BECD9B4E188830EA007B34E0 /* fridayafternext_http.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BECD9B4B188830EA007B34E0 /* fridayafternext_http.mp4 */; };
 		BECD9B4F188830EA007B34E0 /* sample_mpeg4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BECD9B4C188830EA007B34E0 /* sample_mpeg4.mp4 */; };
 		BECD9B5218883AEA007B34E0 /* AnalyticsTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = BECD9B5118883AEA007B34E0 /* AnalyticsTracker.m */; };
+		BECD9B54188978C3007B34E0 /* libSampleVideoLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD9B53188978C3007B34E0 /* libSampleVideoLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +63,12 @@
 		BE0B8B33188597BE00599CE2 /* admsAppLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = admsAppLibrary.a; path = ADMS_AppLibrary/admsAppLibrary.a; sourceTree = "<group>"; };
 		BE0B8B3518859FF900599CE2 /* TrackingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingHelper.h; sourceTree = "<group>"; };
 		BE0B8B3618859FF900599CE2 /* TrackingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingHelper.m; sourceTree = "<group>"; };
-		BECD9B4818882FD3007B34E0 /* libSampleVideoLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSampleVideoLibrary.a; path = staticVideoLib/libSampleVideoLibrary.a; sourceTree = "<group>"; };
 		BECD9B4A188830EA007B34E0 /* big-buck-bunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "big-buck-bunny.mp4"; sourceTree = "<group>"; };
 		BECD9B4B188830EA007B34E0 /* fridayafternext_http.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fridayafternext_http.mp4; sourceTree = "<group>"; };
 		BECD9B4C188830EA007B34E0 /* sample_mpeg4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_mpeg4.mp4; sourceTree = "<group>"; };
 		BECD9B5018883AEA007B34E0 /* AnalyticsTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsTracker.h; sourceTree = "<group>"; };
 		BECD9B5118883AEA007B34E0 /* AnalyticsTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsTracker.m; sourceTree = "<group>"; };
+		BECD9B53188978C3007B34E0 /* libSampleVideoLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSampleVideoLibrary.a; path = staticVideoLib/libSampleVideoLibrary.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BECD9B4918882FD3007B34E0 /* libSampleVideoLibrary.a in Frameworks */,
+				BECD9B54188978C3007B34E0 /* libSampleVideoLibrary.a in Frameworks */,
 				BE0B8B34188597BE00599CE2 /* admsAppLibrary.a in Frameworks */,
 				BE0B8AF01885955600599CE2 /* CoreGraphics.framework in Frameworks */,
 				BE0B8AF21885955600599CE2 /* UIKit.framework in Frameworks */,
@@ -119,7 +119,7 @@
 		BE0B8AEC1885955600599CE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BECD9B4818882FD3007B34E0 /* libSampleVideoLibrary.a */,
+				BECD9B53188978C3007B34E0 /* libSampleVideoLibrary.a */,
 				BE0B8B33188597BE00599CE2 /* admsAppLibrary.a */,
 				BE0B8AED1885955600599CE2 /* Foundation.framework */,
 				BE0B8AEF1885955600599CE2 /* CoreGraphics.framework */,
@@ -434,8 +434,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					$SRCROOT/ADMS_AppLibrary,
-					$SRCROOT/fakeStaticLib,
-					/Users/mpropst/Documents/Omniture3Test/Omniture3SampleTestProject/fakeStaticLib,
+					$SRCROOT/staticVideoLib,
 					/Users/mpropst/Documents/Omniture3Test/Omniture3SampleTestProject/staticVideoLib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,8 +459,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					$SRCROOT/ADMS_AppLibrary,
-					$SRCROOT/fakeStaticLib,
-					/Users/mpropst/Documents/Omniture3Test/Omniture3SampleTestProject/fakeStaticLib,
+					$SRCROOT/staticVideoLib,
 					/Users/mpropst/Documents/Omniture3Test/Omniture3SampleTestProject/staticVideoLib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";

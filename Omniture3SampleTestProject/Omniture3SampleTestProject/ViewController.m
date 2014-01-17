@@ -27,7 +27,7 @@
     //[TrackingHelper configureMediaMeasurement];
     
 	// Do any additional setup after loading the view, typically from a nib.
-    //[self setupAppButtons];
+        [self setupAppButtons];
     NSDictionary *analyticsInfoDict = @{ };
     [AnalyticsTracker logEvent:@"ViewLoaded"
                         onPage:@"MainPage"
@@ -37,13 +37,9 @@
 }
 
 - (void)setupAppButtons{
-    UILabel *appBtnLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 40, 275, 30)];
-    [appBtnLabel setText:@"App Level Omniture Instance"];
-    [self.view addSubview:appBtnLabel];
-    
-    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(20, 80, 275, 30)];
-    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(20, 115, 275, 30)];
-    UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(20, 150, 275, 30)];
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(20, 380, 275, 30)];
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(20, 415, 275, 30)];
+    UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(20, 450, 275, 30)];
     
     [btn1 setBackgroundColor:[UIColor blackColor]];
     [btn2 setBackgroundColor:[UIColor blackColor]];
@@ -81,9 +77,9 @@
     [btn2 setBackgroundColor:[UIColor blueColor]];
     [btn3 setBackgroundColor:[UIColor blueColor]];
     
-    [btn1 setTitle:@"Send Fake Event 1" forState:UIControlStateNormal];
-    [btn2 setTitle:@"Send Fake Event 2" forState:UIControlStateNormal];
-    [btn3 setTitle:@"Send Fake Event 3" forState:UIControlStateNormal];
+    [btn1 setTitle:@"Load Video 1" forState:UIControlStateNormal];
+    [btn2 setTitle:@"Load Video 2" forState:UIControlStateNormal];
+    [btn3 setTitle:@"Load Video 3" forState:UIControlStateNormal];
     
     [btn1 addTarget:self action:@selector(btn1Clicked) forControlEvents:UIControlEventTouchUpInside];
     [btn2 addTarget:self action:@selector(btn2Clicked) forControlEvents:UIControlEventTouchUpInside];
@@ -96,15 +92,27 @@
 
 #pragma mark - Buttons for App Events
 - (void)btn1AppClicked{
-//    [TrackingHelper trackCustomEvents:@"AppEvent1"];
+    NSDictionary *analyticsInfoDict = @{ };
+    [AnalyticsTracker logEvent:@"App_Button_1_Clicked"
+                        onPage:@"MainPage"
+                     inSection:@"none"
+                withParameters:analyticsInfoDict];
 }
 
 - (void)btn2AppClicked{
-//    [TrackingHelper trackCustomEvents:@"AppEvent2"];
+    NSDictionary *analyticsInfoDict = @{ };
+    [AnalyticsTracker logEvent:@"App_Button_2_Clicked"
+                        onPage:@"MainPage"
+                     inSection:@"none"
+                withParameters:analyticsInfoDict];
 }
 
 - (void)btn3AppClicked{
-//    [TrackingHelper trackCustomEvents:@"AppEvent3"];
+    NSDictionary *analyticsInfoDict = @{ };
+    [AnalyticsTracker logEvent:@"App_Button_3_Clicked"
+                        onPage:@"MainPage"
+                     inSection:@"none"
+                withParameters:analyticsInfoDict];
 }
 
 #pragma mark - Buttons for Static Library Events

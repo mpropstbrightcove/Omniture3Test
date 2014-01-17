@@ -10,6 +10,9 @@
 
 @implementation SampleVideoLibrary
 
+NSString *const TRACKING_RSID =   @"rsid_value_sample_app";
+NSString *const TRACKING_SERVER = @"http://www.foo_app.com";
+
 
 - (MPMoviePlayerController*)createMPMoviePlayerWithVideo:(NSURL *)url{
     self.player = [[MPMoviePlayerController alloc] initWithContentURL:url];
@@ -20,9 +23,6 @@
 }
 
 - (void)setupOmniture{
-    NSString *const TRACKING_RSID =   @"YOUR_RSID_HERE";
-    NSString *const TRACKING_SERVER = @"YOUR_SERVER_HERE";
-    
     ADMS_Measurement *measurement = [ADMS_Measurement sharedInstance];
     [measurement configureMeasurementWithReportSuiteIDs:TRACKING_RSID
                                          trackingServer:TRACKING_SERVER];
@@ -45,6 +45,8 @@
                                                  @"event10", @"60",
                                                  nil];
     
+    
+
     mediaMeasure.contextDataMapping = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        @"eVar2,prop2",@"a.media.name",
                                        @"eVar3",@"a.media.segment",
@@ -63,5 +65,17 @@
     //Track Video
     [mediaMeasure setAutoTrackingOptions:ADMS_MediaAutoTrackOptionsMPMoviePlayer];
 }
+
+#pragma mark - delegate methods
+
+- (void)ADMS_MediaMeasurementMonitor:(ADMS_Measurement *)measurement media:(ADMS_MediaState *)media
+{
+    NSLog(@"VMNOmniture: %@ percent %f%%, offset %f, segment length %f, time played %f, media length %f", [media mediaEvent], media.percent, media.offset, media.segmentLength, media.timePlayed, media.length);
+    [measurement configureMeasurementWithReportSuiteIDs:TRACKING_RSID
+                                         trackingServer:TRACKING_SERVER];
+    
+    
+}
+
 
 @end
