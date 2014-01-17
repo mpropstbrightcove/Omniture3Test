@@ -73,7 +73,13 @@ NSString *const TRACKING_SERVER = @"http://www.foo_app.com";
     NSLog(@"VMNOmniture: %@ percent %f%%, offset %f, segment length %f, time played %f, media length %f", [media mediaEvent], media.percent, media.offset, media.segmentLength, media.timePlayed, media.length);
     [measurement configureMeasurementWithReportSuiteIDs:TRACKING_RSID
                                          trackingServer:TRACKING_SERVER];
+    //Test Setting Props/Evars Explicitly
+    [[ADMS_Measurement sharedInstance] setProp:1 toValue:@"prop1-videoLibraryOnMediaMeasurement"];
+    [[ADMS_Measurement sharedInstance] setEvar:1 toValue:@"evar1-videoLibraryOnMediaMeasurement"];
     
+    [[ADMS_Measurement sharedInstance] setProp:2 toValue:@"prop2-videoLibraryOnMediaMeasurement"];
+    [[ADMS_Measurement sharedInstance] setEvar:2 toValue:@"evar2-videoLibraryOnMediaMeasurement"];
+
     
 }
 

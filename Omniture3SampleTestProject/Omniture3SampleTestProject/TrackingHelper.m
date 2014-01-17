@@ -95,6 +95,10 @@ NSString *const TRACKING_APP_SERVER = @"http://www.foo_app.com";
     
     [[ADMS_Measurement sharedInstance] trackEvents:@"event16" withContextData:contextDict];
     
+    //Test Setting Props
+    [[ADMS_Measurement sharedInstance] setProp:1 toValue:@"prop1-app"];
+    [[ADMS_Measurement sharedInstance] setProp:2 toValue:@"prop2-app"];
+    [[ADMS_Measurement sharedInstance] setProp:3 toValue:@"prop3-app"];
 }
 
 + (NSString*)dayOfWeek {
