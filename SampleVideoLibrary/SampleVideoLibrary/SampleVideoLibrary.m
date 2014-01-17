@@ -49,6 +49,8 @@ NSString *const TRACKING_SERVER = @"http://www.foo_app.com";
 
     mediaMeasure.contextDataMapping = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        @"eVar2,prop2",@"a.media.name",
+                                       @"eVar4", @"eVar4-VideoLibrary",
+                                       @"eVar5", @"eVar5-VideoLibrary",
                                        @"eVar3",@"a.media.segment",
                                        @"eVar1",@"a.contentType",
                                        @"event3",@"a.media.timePlayed",

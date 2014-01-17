@@ -53,6 +53,9 @@ NSString *const TRACKING_APP_SERVER = @"http://www.foo_app.com";
     mediaMeasurement.contextDataMapping = [@{
         @"a.media.name":@"eVar2,prop2",
         @"a.media.segment":@"eVar3",
+        @"a.media.segment":@"eVar4",
+        @"a.media.segment":@"eVar5",
+        @"a.media.segment":@"eVar6",
         @"a.contentType":@"eVar1",
         @"a.media.timePlayed":@"event3",
         @"a.media.view":@"event1",
@@ -99,6 +102,12 @@ NSString *const TRACKING_APP_SERVER = @"http://www.foo_app.com";
     [[ADMS_Measurement sharedInstance] setProp:1 toValue:@"prop1-app"];
     [[ADMS_Measurement sharedInstance] setProp:2 toValue:@"prop2-app"];
     [[ADMS_Measurement sharedInstance] setProp:3 toValue:@"prop3-app"];
+    
+    [[ADMS_Measurement sharedInstance] setEvar:4 toValue:@"evar4-app"];
+    [[ADMS_Measurement sharedInstance] setEvar:5 toValue:@"evar5-app"];
+    [[ADMS_Measurement sharedInstance] setEvar:6 toValue:@"evar6-app"];
+    
+    
 }
 
 + (NSString*)dayOfWeek {
